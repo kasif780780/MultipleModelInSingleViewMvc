@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Lawyer.DTOModels.Social>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FacebookUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TwitterUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SkypeUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YoutubeUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkedInUrl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacebookUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TwitterUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SkypeUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YoutubeUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LinkedInUrl)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SocialId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SocialId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SocialId })
+        </td>
+    </tr>
+}
+
+</table>

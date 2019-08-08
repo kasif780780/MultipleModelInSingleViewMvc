@@ -1,0 +1,51 @@
+﻿@model Lawyer.DTOModels.SliderSection
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SliderSection</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WelcomeTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WelcomeTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeadingTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeadingTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpanImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpanImage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
